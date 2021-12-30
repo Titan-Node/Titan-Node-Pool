@@ -14,7 +14,7 @@ Start video mining on Livepeer by joining the Titan Node Pool
 
 # Support
 Join Discord for help and support:
-[https://discord.gg/aPzazRZadq](https://discord.gg/aPzazRZadq)
+[https://discord.gg/FbB89GDgkC](https://discord.gg/FbB89GDgkC)
 
 Pool Leaderboard:
 [https://app.titan-node.com](https://app.titan-node.com)
