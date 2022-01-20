@@ -8,7 +8,7 @@ Start video mining on Livepeer by joining the Titan Node Pool
 
 # Getting Started - Installation
 1. Patch your NVIDIA Driver to allow unlimited concurrent streams - Link: https://github.com/keylase/nvidia-patch/tree/master/win
-2. Download the Titan Node Pool Launcher [Titan Node Pool Beta.zip](https://files.titan-node.com/Titan-Node-Pool-v1.05-Beta.zip)
+2. Download the lastest release of Titan Node Pool Launcher - Link: [Titan Node Pool](https://github.com/Titan-Node/Titan-Node-Pool/releases)
 3. Unzip program and run the exe
 
 
