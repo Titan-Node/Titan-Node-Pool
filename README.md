@@ -1,11 +1,15 @@
 # Install Titan Node Pool on Linux
 Download:
 ```
-wget https://files.titan-node.com/Titan_Node_Pool_v1.15_Linux.tar.gz
+wget https://files.titan-node.com/Titan_Node_Pool_v1.16_Linux.tar.gz
 ```
 Extract:
 ```
 tar -zxvf Titan_Node_Pool_v1.15_Linux.tar.gz
+```
+Change Directory:
+```
+cd titan_node_pool
 ```
 Run:
 ```
