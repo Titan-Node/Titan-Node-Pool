@@ -24,9 +24,9 @@ Run:
 # Patching
 1. Check your NVIDIA card for session limits - Can be found under the "Max # of concurrent sessions" column. ([NVIDIA Matrix](https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new))
 
-NOTE: Titan Node software will try to auto patch if it detects a limit. If it fails, try step 2.
+   NOTE: Titan Node software will try to automatically patch your driver if it detects a limit. If it fails, try step 2.
 
-2. If required: Patch your NVIDIA Driver to allow unlimited concurrent streams. ([Linux - Keylase Patch](https://github.com/keylase/nvidia-patch))
+2. Manually patch your NVIDIA Driver to allow unlimited concurrent streams. ([Linux - Keylase Patch](https://github.com/keylase/nvidia-patch))
 
 # Support
 Join Discord for help and support:
