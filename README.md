@@ -1,11 +1,11 @@
 # Install Titan Node Pool on Linux
 Download:
 ```
-wget https://files.titan-node.com/Titan_Node_Pool_v1.16_Linux.tar.gz
+wget https://files.titan-node.com/Titan_Node_Pool_v1.17_Linux.tar.gz
 ```
 Extract:
 ```
-tar -zxvf Titan_Node_Pool_v1.16_Linux.tar.gz
+tar -zxvf Titan_Node_Pool_v1.17_Linux.tar.gz
 ```
 Change Directory:
 ```
@@ -20,6 +20,7 @@ Run:
 - Linux (built on Ubuntu 20.04)
 - NVIDIA GPU (as many as you like, AMD not supported)
 - Minimum 100 Mb/s Upload speed
+- Ethernet LAN connection (wired)
 
 # Patching
 1. Check your NVIDIA card for session limits - Can be found under the "Max # of concurrent sessions" column. ([NVIDIA Matrix](https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new))
