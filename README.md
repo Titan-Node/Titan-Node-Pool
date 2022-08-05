@@ -7,10 +7,6 @@ Extract:
 ```
 sudo tar -zxvf Titan_Node_Pool_v1.17_Linux.tar.gz
 ```
-Change Directory:
-```
-cd titan_node_pool
-```
 Run:
 ```
 sudo ./titan
