@@ -1,11 +1,11 @@
 # Install Titan Node Pool on Linux
 Download:
 ```
-sudo wget https://files.titan-node.com/Titan_Node_Pool_v1.26_Linux.tar.gz
+sudo wget https://files.titan-node.com/Titan_Node_Pool_v1.27_Linux.tar.gz
 ```
 Extract:
 ```
-sudo tar -zxvf Titan_Node_Pool_v1.26_Linux.tar.gz
+sudo tar -zxvf Titan_Node_Pool_v1.27_Linux.tar.gz
 ```
 Run:
 ```
@@ -25,7 +25,7 @@ If you already have a Nvidia driver installed but having issues, try the steps b
 
 Install dkms:
 ```
-sudp apt install dkms
+sudo apt install dkms
 ```
 Make directory and cd into it:
 ```
