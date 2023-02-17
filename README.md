@@ -13,7 +13,7 @@ sudo ./titan
 ```
 
 # Requirements
-- Linux (built on Ubuntu 20.04)
+- Linux (built on Ubuntu 18.04)
 - NVIDIA GPU (as many as you like, AMD not supported)
 - Minimum 100 Mb/s Upload speed
 - Ethernet LAN connection (wired)
