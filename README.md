@@ -51,21 +51,9 @@ sudo ./NVIDIA-Linux-x86_64-515.57.run
 
 2. Manually patch your NVIDIA Driver to allow unlimited concurrent streams using this link: ([Linux - Keylase Patch](https://github.com/keylase/nvidia-patch)) or follow the steps below:
 
-Install zip unzip:
-```
-sudo apt install zip unzip
-```
 Download patch (compatable with any driver version):
 ```
-sudo wget https://github.com/keylase/nvidia-patch/archive/refs/heads/master.zip
-```
-Unzip:
-```
-sudo unzip master.zip
-```
-Change into patch directory:
-```
-cd nvidia-patch-master
+sudo wget https://github.com/keylase/nvidia-patch/blob/master/patch.sh
 ```
 Make patch executable:
 ```
