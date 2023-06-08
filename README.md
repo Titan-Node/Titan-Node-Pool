@@ -61,7 +61,7 @@ nvidia-smi
 
 Download patch:
 ```
-sudo wget https://github.com/keylase/nvidia-patch/blob/master/patch.sh
+sudo wget https://raw.githubusercontent.com/keylase/nvidia-patch/master/patch.sh
 ```
 Make patch executable:
 ```
