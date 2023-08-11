@@ -53,7 +53,6 @@ Type=simple
 User=root
 Restart=on-failure
 RestartSec=3
-KillSignal=SIGINT
 TimeoutStopSec=900
 ExecStart=/root/titan/titan \
    -nvidia all \
