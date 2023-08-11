@@ -1,13 +1,11 @@
 ##### Table of Contents  
 - [Requirements](#requirements)
 - [Install Titan Node Pool on Linux](#install-titan-node-pool-on-linux)
-- [Run as system service (optional)](#run-as-system-service--optional-)
-- [Install Nvidia Driver (if required)](#install-nvidia-driver--if-required-)
-- [Patching (if required)](#patching--if-required-)
-- [Stop Auto Update Nvidia Driver (if required)](#stop-auto-update-nvidia-driver--if-required-)
+- [Run as system service (optional)](#run-as-system-service-optional)
+- [Install Nvidia Driver (if required)](#install-nvidia-driver-if-required)
+- [Patching (if required)](#patching-if-required)
+- [Stop Auto Update Nvidia Driver (if required)](#stop-auto-update-nvidia-driver-if-required)
 - [Support](#support)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 
