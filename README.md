@@ -50,8 +50,7 @@ Documentation=https://github.com/Titan-Node/Titan-Node-Pool
 
 [Service]
 Type=simple
-User=execution
-Group=execution
+User=root
 Restart=on-failure
 RestartSec=3
 KillSignal=SIGINT
