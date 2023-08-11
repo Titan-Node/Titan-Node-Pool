@@ -66,6 +66,8 @@ ExecStart=/root/titan/titan \
 [Install]
 WantedBy=multi-user.target
 ```
+_To exit and save, press `Ctrl` + `X`, then `Y`, then `Enter`._
+
 Run daemon-reload and enable titan service.
 ```
 sudo systemctl daemon-reload
