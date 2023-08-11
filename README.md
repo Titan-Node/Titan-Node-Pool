@@ -1,3 +1,24 @@
+##### Table of Contents  
+- [Requirements](#requirements)
+- [Install Titan Node Pool on Linux](#install-titan-node-pool-on-linux)
+- [Run as system service (optional)](#run-as-system-service--optional-)
+- [Install Nvidia Driver (if required)](#install-nvidia-driver--if-required-)
+- [Patching (if required)](#patching--if-required-)
+- [Stop Auto Update Nvidia Driver (if required)](#stop-auto-update-nvidia-driver--if-required-)
+- [Support](#support)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
+
+
+# Requirements
+- Linux (built on Ubuntu 18.04)
+- NVIDIA GPU (as many as you like, AMD not supported)
+- Minimum 100 Mb/s Upload speed
+- Ethernet LAN connection (wired)
+
+
 # Install Titan Node Pool on Linux
 Download:
 ```
@@ -12,14 +33,59 @@ Run:
 sudo ./titan
 ```
 
-# Requirements
-- Linux (built on Ubuntu 18.04)
-- NVIDIA GPU (as many as you like, AMD not supported)
-- Minimum 100 Mb/s Upload speed
-- Ethernet LAN connection (wired)
+# Run as system service (optional)
+Create a systemd unit file to define your `titan.service` configuration:
+```
+sudo nano /etc/systemd/system/titan.service
+```
+Paste the following example configuration into the file and update `ethAddr` and `nickname`.
 
+_Assuming `titan` executable is in a directory `/root/titan/`_:
+```
+[Unit]
+Description=Titan Node Pool service
+Wants=network-online.target
+After=network-online.target
+Documentation=https://github.com/Titan-Node/Titan-Node-Pool
 
-# Install Nvidia Driver
+[Service]
+Type=simple
+User=execution
+Group=execution
+Restart=on-failure
+RestartSec=3
+KillSignal=SIGINT
+TimeoutStopSec=900
+ExecStart=/root/titan/titan \
+   -nvidia all \
+   -configPath /root/titan/config \
+   -ethAddr 0x0000000000000000000000000000000000000000 \
+   -nickname HelloWorld \
+   -enableAutoPatch True 
+
+[Install]
+WantedBy=multi-user.target
+```
+Run daemon-reload and enable titan service.
+```
+sudo systemctl daemon-reload
+sudo systemctl enable titan
+```
+Start the titan service and check it's status.
+```
+sudo systemctl start titan
+sudo systemctl status titan
+```
+To view the logs:
+```
+sudo journalctl -fu titan
+```
+To stop the service:
+```
+sudo systemctl stop titan
+```
+
+# Install Nvidia Driver (if required)
 If your Linux machine does not have a Nvidia driver installed, follow the instructions below.
 If you already have a Nvidia driver installed but having issues, try the steps below. There have been reports of issues using the default `sudo apt install nvidia-driver-[version-number]` not working properly during the patching process. 
 
@@ -44,7 +110,7 @@ Run driver installation:
 sudo ./NVIDIA-Linux-x86_64-515.57.run
 ```
 
-# Patching
+# Patching (if required)
 1. Check your NVIDIA card for session limits - Can be found under the "Max # of concurrent sessions" column. ([NVIDIA Matrix](https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new))
 
    NOTE: Titan Node software will try to automatically patch your driver if it detects a limit. If it fails, try step 2.
@@ -73,7 +139,7 @@ sudo ./patch.sh
 ```
 
 
-# Stop Auto Update Nvidia Driver
+# Stop Auto Update Nvidia Driver (if required)
 If you've needed to patch your driver, we need to stop Nvidia from auto updating the driver. Any update will remove the patch and stops the transcoder from working.
 
 Show list of all drivers on "Auto Update":
