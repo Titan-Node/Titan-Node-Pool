@@ -1,3 +1,8 @@
+Start video mining on Livepeer by joining the Titan Node Pool.
+
+Earn ETH, LPT and LTNT for transcoding live video into multiple resolutions for Livepeer connected applications.
+
+
 ##### Table of Contents  
 - [Requirements](#requirements)
 - [Install Titan Node Pool on Linux](#install-titan-node-pool-on-linux)
