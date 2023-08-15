@@ -1,3 +1,6 @@
+[![Titan-Node-Pool](https://raw.githubusercontent.com/Titan-Node/Titan-Node-Pool/main/Livepeer%20Video%20Mining%20Pool.png)]([https://github.com/livepeer/go-livepeer](https://github.com/Titan-Node/Titan-Node-Pool))
+
+
 Start video mining on Livepeer by joining the Titan Node Pool.
 
 Earn ETH, LPT and LTNT for transcoding live video into multiple resolutions for Livepeer connected applications.
