@@ -10,6 +10,7 @@ Earn ETH, LPT and LTNT for transcoding live video into multiple resolutions for 
 - [Requirements](#requirements)
 - [Install Titan Node Pool on Linux](#install-titan-node-pool-on-linux)
 - [Run as system service (optional)](#run-as-system-service-optional)
+- [List Of Arguments](#list-of-arguments)
 - [Install Nvidia Driver (if required)](#install-nvidia-driver-if-required)
 - [Patching (if required)](#patching-if-required)
 - [Stop Auto Update Nvidia Driver (if required)](#stop-auto-update-nvidia-driver-if-required)
@@ -28,11 +29,11 @@ Earn ETH, LPT and LTNT for transcoding live video into multiple resolutions for 
 # Install Titan Node Pool on Linux
 Download:
 ```
-sudo wget https://files.titan-node.com/Titan_Node_Pool_v1.30_Linux.tar.gz
+sudo wget https://files.titan-node.com/Titan_Node_Pool_v1.31_Linux.tar.gz
 ```
 Extract:
 ```
-sudo tar -zxvf Titan_Node_Pool_v1.30_Linux.tar.gz
+sudo tar -zxvf Titan_Node_Pool_v1.31_Linux.tar.gz
 ```
 Run:
 ```
@@ -89,6 +90,23 @@ sudo journalctl -fu titan
 To stop the service:
 ```
 sudo systemctl stop titan
+```
+
+# List Of Arguments
+```
+options:
+  -h, --help            show this help message and exit
+  -nvidia string        Comma-separated list of Nvidia GPU device IDs i.e 0,1,2 (or "all" for all available devices).
+  -maxSessions int      Maximum number of concurrent transcoding sessions for transcoder.
+  -v int                Log verbosity. {4|5|6}
+  -configPath string    Path to config files.
+  -ethAddr string       Ethereum address for payouts.
+  -nickname string      Nickname to identify node on dashboard.
+  -disableAutoStartup bool
+                        Disables auto startup prompt for Windows. Turn this on if you are running as system service.
+  -enableAutoPatch bool
+                        Enables auto patching of nvidia driver without need of prompt. Turn this on if you are running as system service.
+  -GUIPrompt bool       Passes prompt to GUI program for Windows. Leave this off if you are running Titan from the command line.
 ```
 
 # Install Nvidia Driver (if required)
