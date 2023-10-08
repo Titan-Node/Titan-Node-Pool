@@ -5,6 +5,9 @@ Start video mining on Livepeer by joining the Titan Node Pool.
 
 Earn ETH, LPT and LTNT for transcoding live video into multiple resolutions for Livepeer connected applications.
 
+Pool Dashboard:
+[http://app.titan-node.com](http://app.titan-node.com)
+
 
 ##### Table of Contents  
 - [Requirements](#requirements)
@@ -190,5 +193,3 @@ apt-mark showhold
 Join Discord for help and support:
 [https://discord.gg/FbB89GDgkC](https://discord.gg/FbB89GDgkC)
 
-Pool Dashboard:
-[http://app.titan-node.com](http://app.titan-node.com)
