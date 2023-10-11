@@ -32,11 +32,11 @@ Pool Dashboard:
 # Install Titan Node Pool on Linux
 Download:
 ```
-sudo wget https://files.titan-node.com/Titan_Node_Pool_v1.33_Linux.tar.gz
+sudo wget https://files.titan-node.com/Titan_Node_Pool_v1.34_Linux.tar.gz
 ```
 Extract:
 ```
-sudo tar -zxvf Titan_Node_Pool_v1.33_Linux.tar.gz
+sudo tar -zxvf Titan_Node_Pool_v1.34_Linux.tar.gz
 ```
 Run:
 ```
