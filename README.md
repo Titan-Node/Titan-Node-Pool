@@ -9,7 +9,7 @@ Pool Dashboard:
 [http://app.titan-node.com](http://app.titan-node.com)
 
 
-##### Table of Contents  
+##### Table of Contents
 - [Requirements](#requirements)
 - [Install Titan Node Pool on Linux](#install-titan-node-pool-on-linux)
 - [Run as system service (optional)](#run-as-system-service-optional)
@@ -17,6 +17,7 @@ Pool Dashboard:
 - [Install Nvidia Driver (if required)](#install-nvidia-driver-if-required)
 - [Patching (if required)](#patching-if-required)
 - [Stop Auto Update Nvidia Driver (if required)](#stop-auto-update-nvidia-driver-if-required)
+- [Containerized Operation (Experimental)](#containerized-operation-experimental)
 - [Support](#support)
 
 
@@ -69,7 +70,7 @@ ExecStart=/root/titan/titan \
    -configPath /root/titan/config \
    -ethAddr 0x0000000000000000000000000000000000000000 \
    -nickname HelloWorld \
-   -enableAutoPatch True 
+   -enableAutoPatch True
 
 [Install]
 WantedBy=multi-user.target
@@ -114,7 +115,7 @@ options:
 
 # Install Nvidia Driver (if required)
 If your Linux machine does not have a Nvidia driver installed, follow the instructions below.
-If you already have a Nvidia driver installed but having issues, try the steps below. There have been reports of issues using the default `sudo apt install nvidia-driver-[version-number]` not working properly during the patching process. 
+If you already have a Nvidia driver installed but having issues, try the steps below. There have been reports of issues using the default `sudo apt install nvidia-driver-[version-number]` not working properly during the patching process.
 
 Install dkms:
 ```
@@ -189,7 +190,36 @@ apt-mark showhold
 ```
 
 
+# Containerized Operation (Experimental)
+
+Within this repository, you'll discover a [Dockerfile](Dockerfile) and [docker-compose.yml](docker-compose.yml) file, offering a method to encapsulate the Titan Node pool within a Docker container. It's essential to note that this configuration is still in the experimental phase and isn't recommended for production environments. Should you choose to embark on this journey, adhere to the following guidelines:
+
+1. **Docker Deployment**: Commence by installing Docker on your Linux machine. For guidance, refer to the [official Docker installation documentation](https://docs.docker.com/engine/install/ubuntu/).
+
+2. **Nvidia Container Toolkit Integration**: Ensure your system is fortified with the [Nvidia container toolkit](https://github.com/NVIDIA/nvidia-container-toolkit).
+
+3. **Image Construction**: Execute the subsequent command to construct the Docker image:
+
+```bash
+docker build -t titan-node-pool .
+```
+
+4. **Container Launch**: Initiate the container using the following command. Remember to substitute `<ETH_ADDRESS>` with your Ethereum address, `<NICKNAME>` with your designated identifier and `<MAX_SESSIONS>` with your desired session count:
+
+```bash
+docker run --runtime nvidia titan-node-pool -ethAddr <ETH_ADDRESS> -nickname <NICKNAME> -maxSessions <MAX_SESSIONS>
+```
+
+ > \[!NOTE]
+ > If a discreet background operation suits your preferences, orchestrate it via Docker Compose:
+>
+>```bash
+>docker-compose up -d
+>```
+>
+> During this process, update the [docker-compose.yml](docker-compose.yml) file with your precise ETH address, orchestrator secret and max sessions count.
+
+
 # Support
 Join Discord for help and support:
 [https://discord.gg/FbB89GDgkC](https://discord.gg/FbB89GDgkC)
-
