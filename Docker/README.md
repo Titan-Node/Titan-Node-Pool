@@ -20,22 +20,17 @@ docker run --runtime nvidia  -itd --name titan-node \
         icsy7867/titan-node:latest
 ```
 
-Additionally you can also specify which nvidia GPU to use:
+**Additionally you can also specify which nvidia GPU to use:**
 ```
     -e "nvidia=0"
 ```
-And your max sessions:
+**And your max sessions:**
 ```
     -e "maxSessions=10"
 ```
 
-If you would like to mount your config directory, to preserve settings you can mount the /config directory:
-```
-    -v /path/to/config:/config
-```
 
-So using all variables:
-
+**So using all variables:**
 ```
 docker run  --runtime nvidia -itd --name titan-node \
     -e "ethAddr=0xXXXXXXXXXX" \
@@ -45,7 +40,7 @@ docker run  --runtime nvidia -itd --name titan-node \
         icsy7867/titan-node:latest
 ```
 
-To upgrade the container, simply pull the latest version:
+**To upgrade the container, simply pull the latest version:**
 ```
 docker pull icsy7867/titan-node:latest
 docker rm -f titan-node
