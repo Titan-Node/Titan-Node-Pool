@@ -1,18 +1,16 @@
 
 
 
-- Note - You must install the nvidia drivers and nvidia container toolkit on your system.
-    - [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
-    - [NVIDIA Driver Installation](https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html)
+*Note - You must install the nvidia drivers and nvidia container toolkit on your system.*
+  - [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+  - [NVIDIA Driver Installation](https://docs.nvidia.com/datacenter/tesla/tesla-installation-notes/index.html)
 
 If you do not wish to build the container manually, a nightly version is automatically built and deployed to dockerhub:
 https://hub.docker.com/r/icsy7867/titan-node
 
 This is a docker container to help run Titan-Node's binary for mining livepeer:
-
-https://titan-node.com/
-
-https://github.com/Titan-Node
+  - https://titan-node.com/
+  - https://github.com/Titan-Node
 
 For a minimum deployment you need to specific your nickman and your Livepeer address:
 ```
