@@ -201,6 +201,7 @@ Within this repository, you'll discover a [Dockerfile](Dockerfile) and [docker-c
 3. **Image Construction**: Execute the subsequent command to construct the Docker image:
 
 ```bash
+cd Docker
 docker build -t titan-node-pool .
 ```
 
