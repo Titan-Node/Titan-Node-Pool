@@ -12,7 +12,7 @@ This is a docker container to help run Titan-Node's binary for mining livepeer:
   - https://titan-node.com/
   - https://github.com/Titan-Node
 
-For a minimum deployment you need to specific your nickman and your Livepeer address:
+**For a minimum deployment you need to specific your nickman and your Livepeer address:**
 ```
 docker run --runtime nvidia  -itd --name titan-node \
     -e "ethAddr=0xXXXXXXXXXX" \
