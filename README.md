@@ -214,7 +214,7 @@ docker run --runtime nvidia titan-node-pool -ethAddr <ETH_ADDRESS> -nickname <NI
  > If a discreet background operation suits your preferences, orchestrate it via Docker Compose:
 >
 >```bash
->docker-compose up -d
+>docker compose up -d
 >```
 >
 > During this process, update the [docker-compose.yml](docker-compose.yml) file with your precise ETH address, orchestrator secret and max sessions count.

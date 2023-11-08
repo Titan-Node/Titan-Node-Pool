@@ -6,6 +6,7 @@ ENV	NVIDIA_DRIVER_CAPABILITIES=all
 RUN apt-get update && apt-get install -y \
     wget \
     tar \
+    psmisc \
     pciutils \
     && rm -rf /var/lib/apt/lists/*
 
