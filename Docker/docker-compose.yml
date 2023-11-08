@@ -1,0 +1,15 @@
+version: "3.8"
+
+name: titan-node
+
+services:
+  titan-node-pool:
+    image: icsy7867/titan-node:latest
+    container_name: titan-node-pool
+    restart: unless-stopped
+    runtime: nvidia
+    environment: 
+      - "ethAddr=0xXXXXXXXXXX"
+      - "nickname=my-nickname"
+      - "nvidia=0"
+      - "maxSessions=10"
