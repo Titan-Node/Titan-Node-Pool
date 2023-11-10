@@ -189,16 +189,9 @@ Confirm the driver is on hold:
 apt-mark showhold
 ```
 
-
 # Containerized Operation (Experimental)
 
-Within this repository, you'll discover a [Dockerfile](Docker/Dockerfile) and [docker-compose.yml](Docker/docker-compose.yml) file, offering a method to encapsulate the Titan Node pool within a Docker container. It's essential to note that this configuration is still in the experimental phase and isn't recommended for production environments. Should you choose to embark on this journey, adhere to the following guidelines:
-
-1. **Docker Deployment**: Commence by installing Docker on your Linux machine. For guidance, refer to the [official Docker installation documentation](https://docs.docker.com/engine/install/ubuntu/).
-
-2. **Nvidia Container Toolkit Integration**: Ensure your system is fortified with the [Nvidia container toolkit](https://github.com/NVIDIA/nvidia-container-toolkit).
-
-For more information, check out the [README](Docker/README.md) in the Docker directory
+Within this repository, you'll discover a [Dockerfile](docker/Dockerfile) and [docker-compose.yml](docker/docker-compose.yml) file, offering a method to encapsulate the Titan Node pool within a Docker container. It's essential to note that this configuration is still in the experimental phase and isn't recommended for production environments. For more information, check out the [README](docker/README.md) in the Docker directory
 
 # Support
 Join Discord for help and support:

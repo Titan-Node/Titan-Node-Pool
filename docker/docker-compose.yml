@@ -4,11 +4,12 @@ name: titan-node
 
 services:
   titan-node-pool:
-    image: icsy7867/titan-node:latest
+    build: .
+    image: titan-node-pool
     container_name: titan-node-pool
     restart: unless-stopped
     runtime: nvidia
-    environment: 
+    environment:
       - "ethAddr=0xXXXXXXXXXX"
       - "nickname=my-nickname"
       - "nvidia=0"

@@ -21,6 +21,7 @@ RUN URL=$(curl https://github.com/Titan-Node/Titan-Node-Pool | grep gz | grep -E
 	chmod +x /usr/local/bin/titan
 
 RUN mkdir /config
+
 # Set the entrypoint to start the Titan Node pool binary with command line arguments
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
