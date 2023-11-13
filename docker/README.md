@@ -1,4 +1,4 @@
-# Containerized Operation
+# Containerized Operation - Experimental
 
 This directory provides a Docker-based setup for the Titan Node pool. It includes a [Dockerfile](docker/Dockerfile) and a [docker-compose.yml](docker/docker-compose.yml) file.
 
